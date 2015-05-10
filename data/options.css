@@ -1,0 +1,16 @@
+h1{
+	font-size:150%;
+	font-weight:bold;
+	text-align:center;
+}
+h2{
+	font-size:120%;
+	font-weight:bold;
+	margin-top:5px;
+}
+grid{
+	margin-top:10px;
+}
+column.list{
+	width:50%;
+}

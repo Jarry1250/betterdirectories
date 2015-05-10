@@ -1,0 +1,93 @@
+{
+  "name": "betterdirectories",
+  "title": "Better Directories",
+  "id": "{4D33EE62-58A1-11DD-AF89-E7AB55D89593}",
+  "description": "Makes boring http(s) directories look better and be more functional.",
+  "author": "Harry Burt",
+  "license": "MIT",
+  "version": "2.0.0",
+  "preferences": [
+    {
+      "name": "dateformat",
+      "title": "Preferred date format",
+      "description": "",
+      "type": "radio",
+      "options": [
+        {
+          "value": "en-us",
+          "label": "MM-DD-YYYY : US Style"
+        },
+        {
+          "value": "en-gb",
+          "label": "DD-MM-YYYY : British Style"
+        },
+        {
+          "value": "int",
+          "label": "YYYY-MM-DD : ISO Standard"
+        }
+      ],
+      "value": "en-us"
+    },
+    {
+      "name": "notags",
+      "type": "bool",
+      "title": "The directories I want to affect do not contain <form>, <link>; or <script> tags",
+      "description": "",
+      "value": true
+    },
+    {
+      "name": "nocomments",
+      "type": "bool",
+      "title": "The directories I want to affect do not contain HTML comments",
+      "description": "",
+      "value": true
+    },
+    {
+      "name": "nodoctype",
+      "type": "bool",
+      "title": "The directories I want to affect do not have a declared doctype",
+      "description": "",
+      "value": false
+    },
+    {
+      "name": "onlywithslash",
+      "type": "bool",
+      "title": "The directories I want to affect have a '/' at the end of their URLs",
+      "description": "",
+      "value": false
+    },
+    {
+      "name": "blacklisturls",
+      "title": "Blacklisted URLs",
+      "type": "string",
+      "value": "http://ftp.mozilla.org/pub/mozilla.org/,http://ftp.mozilla.org/pub/mozilla.org/foo",
+      "hidden": true
+    },
+    {
+      "name": "whitelisturls",
+      "title": "Whitelisted URLs",
+      "type": "string",
+      "value": "http://addons.mozilla.org/",
+      "hidden": true
+    },
+    {
+      "name": "contextmenu",
+      "title": "Context Menu",
+      "dewscription": "Show 'easy add' context menu entries",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "name": "showblacklist",
+      "title": "Show Blacklist",
+      "type": "control",
+      "label": "Show Blacklist"
+    },
+    {
+      "name": "showwhitelist",
+      "title": "Show Whitelist",
+      "type": "control",
+      "label": "Show Whitelist"
+    }
+  ]
+}

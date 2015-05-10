@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://betterdirectories/content/options.css" type="text/css"?>
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	id="BDlist" title="Better Directories Options"
+	ondialogaccept="return onAccept();"
+	onload="onLoad();"
+	buttons="accept,cancel"
+  persist="screenX screenY"
+>
+<script type='application/x-javascript' src='chrome://betterdirectories/content/listFunction.js'></script>
+
+	<h1>Better Non-Directories</h1>
+	<p>These represent pages which are NOT directories and should</p>
+	<p>NOT be targeted for improvement. Any page with this text</p>
+	<p>contained within its URL will be left unimproved, without</p>
+	<p>regard for any other settings.</p>
+	<separator orient="horizontal"/>
+		<listbox id="thelist" seltype="multiple" rows="7" data-name="whitelist">
+		</listbox>
+	<grid>
+		<columns><column/><column/></columns>
+		<rows>
+			<row align="center">
+				<button label="Add New" oncommand="addNew()"/>
+				<button label="Edit" oncommand="editCurrent()"/>
+				<button label="Remove Selected" oncommand="removeSelected();"/>
+			</row>
+		</rows>
+	</grid>
+ </dialog>

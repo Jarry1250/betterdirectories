@@ -1,0 +1,133 @@
+:root {
+	font-family: sans-serif;
+}
+
+img {
+	border: 0;
+}
+
+th {
+	text-align: start;
+	white-space: nowrap;
+}
+
+th > a {
+	color: inherit;
+}
+
+table[order] > thead > tr > th {
+	cursor: pointer;
+}
+
+table[order] > thead > tr > th::after {
+	display: none;
+	width: .8em;
+	-moz-margin-end: -.8em;
+	text-align: end;
+}
+
+table[order="asc"] > thead > tr > th::after {
+	content: "\2193"; /* DOWNWARDS ARROW (U+2193) */
+}
+
+table[order="desc"] > thead > tr > th::after {
+	content: "\2191"; /* UPWARDS ARROW (U+2191) */
+}
+
+table[order][order-by="0"] > thead > tr > th:first-child > a,
+table[order][order-by="1"] > thead > tr > th:first-child + th > a,
+table[order][order-by="2"] > thead > tr > th:first-child + th + th > a {
+	text-decoration: underline;
+}
+
+table[order][order-by="0"] > thead > tr > th:first-child::after,
+table[order][order-by="1"] > thead > tr > th:first-child + th::after,
+table[order][order-by="2"] > thead > tr > th:first-child + th + th::after {
+	display: inline-block;
+}
+
+table.remove-hidden > tbody > tr.hidden-object {
+	display: none;
+}
+
+td {
+	white-space: nowrap;
+}
+
+table.ellipsis {
+	width: 100%;
+	table-layout: fixed;
+	border-spacing: 0;
+}
+
+table.ellipsis > tbody > tr > td {
+	padding: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* name */
+/* name */
+th:first-child {
+	-moz-padding-end: 2em;
+}
+
+/* size */
+th:first-child + th {
+	-moz-padding-end: 1em;
+}
+
+td:first-child + td {
+	text-align: end;
+	-moz-padding-end: 1em;
+}
+
+/* date */
+td:first-child + td + td {
+	-moz-padding-start: 1em;
+	-moz-padding-end: .5em;
+}
+
+/* time */
+td:first-child + td + td + td {
+	-moz-padding-start: .5em;
+}
+
+.symlink {
+	font-style: italic;
+}
+
+.dir,
+.symlink,
+.file {
+	-moz-margin-start: 20px;
+}
+
+.dir::before,
+.file > img {
+	-moz-margin-end: 4px;
+	-moz-margin-start: -20px;
+	max-width: 16px;
+	max-height: 16px;
+	vertical-align: middle;
+}
+
+.dir::before {
+	content: url(resource://gre/res/html/folder.png);
+}
+
+table[order] {
+	margin-bottom: 1em;
+}
+
+p#UI_goUp + div {
+	margin-top: 4em;
+}
+
+div + div {
+	margin-top: 2em;
+}
+
+table {
+	font-size: 100%;
+}
